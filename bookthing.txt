@@ -1,0 +1,211 @@
+<?php
+/**
+ * @package reason
+ * @subpackage minisite_modules
+ */
+/**
+ * Include the parent class & dependencies, and register the module with Reason
+ */
+$GLOBALS[ '_module_class_names' ][ basename( __FILE__, '.php' ) ] = 'QuireMakerModule';
+reason_include_once("classes/attachment_server.php");
+class QuireMakerModule extends DefaultMinisiteModule {
+	public $acceptable_params = array(
+	);
+	private $d;
+	function init( $args = array() ) {	
+	}
+	function getDocumentConfig($numPages) {
+		$docConfig = Array();
+		// be sure to name the pages "pageX" or delete doesn't work right...
+		if ($numPages == 16) {
+			$docConfig = Array(
+				"page1" => Array(
+					"side_a" => Array(
+						"top" => Array(2, 15, 14, 3),
+						"bottom" => Array(7, 10, 11, 6)
+					),
+					"side_b" => Array(
+						"top" => Array(8, 9, 12, 5),
+						"bottom" => Array(1, 16, 13, 4)
+					)
+				)
+			);
+		} else if ($numPages == 32) {
+			$docConfig = Array(
+				"page1" => Array(
+					"side_a" => Array(
+						"top" => Array(2, 31, 30, 3),
+						"bottom" => Array(7, 26, 27, 6)
+					),
+					"side_b" => Array(
+						"top" => Array(8, 25, 28, 5),
+						"bottom" => Array(1, 32, 29, 4)
+					)
+				),
+				"page2" => Array(
+					"side_a" => Array(
+						"top" => Array(10, 23, 22, 11),
+						"bottom" => Array(15, 18, 19, 14)
+					),
+					"side_b" => Array(
+						"top" => Array(16, 17, 20, 13),
+						"bottom" => Array(9, 24, 21, 12)
+					)
+				)
+			);
+		} else {
+			die("invalid page numbers");
+		}
+		return $docConfig;
+	}
+	function runForm() {
+		$d = new Disco();
+		$d->actions = Array('Generate');
+		$d->set_box_class('StackedBox');
+		// $d->add_element('content', 'textarea');
+		$d->add_element('content', 'tiny_mce');
+		$d->add_required('content');
+		$d->add_element('page_width', 'text');
+		$d->set_value('page_width', 8.5);
+		$d->set_comments('page_width', form_comment('in inches'));
+		$d->add_required('page_width');
+		$d->add_element('page_height', 'text');
+		$d->set_value('page_height', 11);
+		$d->set_comments('page_height', form_comment('in inches'));
+		$d->add_required('page_height');
+		$d->add_element('pages', 'select', array('options' => Array('16' => 16, '32' => 32)));
+		$d->set_comments('pages', form_comment('Pages in the generated quire. Content will be truncated if it exceeds this length.'));
+		$d->set_value('pages', '16');
+		$d->add_required('pages');
+		$d->add_element('font_size', 'text');
+		$d->set_value('font_size', '12px');
+		$d->set_comments('font_size', form_comment('Font size on the individual quire pages. Play with this to get it all to fit.'));
+		$d->add_required('font_size');
+		$d->add_element('include_page_numbers', 'checkbox');
+		$d->set_comments('include_page_numbers', form_comment('Prints page numbers on the individual quire pages to make for easier folding.'));
+		$d->run();
+		$this->d = $d;
+	}
+	function run() {
+		$this->runForm();
+		if ($this->d->successfully_submitted()) {
+			$this->generatePdf();
+		}
+	}
+	function generatePdf() {
+		$tempPath = REASON_TEMP_DIR . "quiremaker/";
+		if (!file_exists($tempPath)) { mkdir($tempPath); }
+		$d = $this->d;
+		// $pwd = exec("pwd");
+		// echo "PWD [$pwd]";
+		// return;
+		// generate a stylesheet for this run
+		$styleSheet = $tempPath . "quiremaker.css";
+		// $styles = "p { font-size: " . $d->get_value("font_size") . ";\nbackground-color: pink;\n}\n";
+		$styles = "p { font-size: " . $d->get_value("font_size") . ";\n}\n";
+		file_put_contents($styleSheet, $styles);
+		// write the user submitted content out to a file
+		$inputFile = $tempPath . "user_input.html";
+		file_put_contents($inputFile, $d->get_value("content"));
+		// convert the html to a single large pdf
+		$convertedFile = $tempPath . "converted.pdf";
+		$inchesToCm = 2.54;
+		// these widths are the widths of one of the FOLDED pages, not the entire printed sheet...
+		$subWidth = ($d->get_value("page_height") / 4) * $inchesToCm;
+		$subHeight = ($d->get_value("page_width") / 2) * $inchesToCm;
+		$convertCmd = "wkhtmltopdf";
+		$wkArgs = "";
+		if ($d->get_value("include_page_numbers")) {
+			$wkArgs .= " --header-center \"([page])\"";
+		}
+		$wkArgs .= " --user-style-sheet " . $styleSheet;
+		$wkArgs .= escapeshellcmd(" --page-width " . $subWidth . "cm");
+		$wkArgs .= escapeshellcmd(" --page-height " . $subHeight . "cm");
+		$convertCmd .= " " . $wkArgs . " " . $inputFile . " " . $convertedFile;
+		$this->execer($convertCmd);
+		$imEnhancers = "-quality 100 -density 150 -sharpen 0x1.0 ";
+		// chop the convertedFile into individual pdf's
+		$numPages = intval($d->get_value("pages"));
+		for ($i = 0 ; $i < $numPages ; $i++) {
+			$pageFile = $tempPath . "page" . $this->zeroPad($i+1) . ".pdf";
+			$chopCmd = "convert " . $imEnhancers . $convertedFile . "[$i] " . $pageFile;
+			$this->execer($chopCmd);
+		}
+		// if content was too short, we need to generate some empty pdf's to pad things out...
+		for ($i = 0 ; $i < $numPages ; $i++) {
+			$pageFile = $tempPath . "page" . $this->zeroPad($i+1) . ".pdf";
+			if (!file_exists($pageFile)) {
+				$emptyFile = $tempPath . "empty.html";
+				file_put_contents($emptyFile, "<html><body>&nbsp;</body></html>");
+				$convertCmd = "wkhtmltopdf " . $wkArgs .
+								" " . ($d->get_value("include_page_numbers") ? " --page-offset " . $i : "") .
+								" " . $emptyFile . " " . $pageFile;
+				$this->execer($convertCmd);
+			}
+		}
+		// now we need to diverge based on number of pages
+		$docConfig = $this->getDocumentConfig($numPages);
+		$quireFiles = Array();
+		foreach ($docConfig as $pageName => $pageCfg) {
+			$sideFiles = Array();
+			foreach ($pageCfg as $sideName => $sideCfg) {
+				foreach ($sideCfg as $rowName => $pageNums) {
+					$horizStitchCmd = "convert " . $imEnhancers . " ";
+					foreach ($pageNums as $pageNum) {
+						$pageFile = $tempPath . "page" . $this->zeroPad($pageNum) . ".pdf";
+						if ($rowName == "top") {
+							$horizStitchCmd .= " $pageFile";
+						} else {
+							// for the bottom row of a page, we need to flip the pages...
+							$flipFile = $tempPath . "flip" . $this->zeroPad($pageNum) . ".pdf";
+							$flipCmd = "convert $imEnhancers $pageFile -rotate 180 $flipFile";
+							$this->execer($flipCmd);
+							$horizStitchCmd .= " $flipFile";
+						}
+					}
+					$horizStitchCmd .= " +append " . $tempPath . $pageName . "_" . $sideName . "_" . $rowName . ".pdf";
+					$this->execer($horizStitchCmd);
+				}
+				$sideFile = $tempPath . $pageName . "_" . $sideName . ".pdf";
+				$vertStitchCmd = "convert " . $imEnhancers . " " . $tempPath . $pageName . "_" . $sideName . "_top.pdf " . $tempPath . $pageName . "_" . $sideName . "_bottom.pdf -append " . $sideFile;
+				$this->execer($vertStitchCmd);
+				$sideFiles[] = $sideFile;
+			}
+			$quireFile = $tempPath . "quire_" . $pageName . ".pdf";
+			$gsCmd = "gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=$quireFile " . implode(" ", $sideFiles);
+			$this->execer($gsCmd);
+			$quireFiles[] = $quireFile;
+		}
+		// join multiple quire files together
+		$completeQuireFile = $tempPath . "delivery.pdf";
+		if (count($quireFiles) == 1) {
+			copy($quireFiles[0], $completeQuireFile);
+		} else {
+			$gsCmd = "gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=$completeQuireFile " . implode(" ", $quireFiles);
+			$this->execer($gsCmd);
+		}
+		// delete intermediate files
+		$patterns = Array("quire_*", "page*", "flip*", "converted.pdf", "*.css", "*.html");
+		foreach ($patterns as $pattern) {
+			foreach (glob($tempPath . $pattern) as $file) {
+				unlink($file);
+			}
+		}
+		$as = new AttachmentServer();
+		$as->serve_attachment("quire.pdf", $completeQuireFile, "application/pdf", true);
+		die();
+	}
+	function execer($cmd) {
+		if (true) {
+			// echo "run [$cmd]<P>";
+			exec($cmd);
+		} else {
+			echo "run [$cmd]<P>";
+		}
+	}
+	function zeroPad($num) {
+		return str_pad("" . $num, 2, "0", STR_PAD_LEFT);
+	}
+}
+?>
+
