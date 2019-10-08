@@ -1,14 +1,16 @@
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
 <head>
-<link rel="stylesheet" type="text/css" href="/global_stock/css/carleton_basic_rules.css" />
-<title>Quire Maker | Carleton College</title>
-<script type="text/javascript" src="/reason_package/jquery/jquery-1.10.2.min.js"></script>
-<link rel="stylesheet" type="text/css" href="/reason_package/reason_4.0/www/css/modules.css?v=4" />
-<link rel="stylesheet" type="text/css" href="/reason_package/reason_4.0/www/tmp_local/compiled/aa/aac2d9e8188e5fb2f0bcf6cc238da4bd_1533565011.css" />
-<link rel="stylesheet" type="text/css" href="/reason_package/reason_4.0/www/tmp_local/compiled/2d/2debe2aa4a8201c2ff4b4dfc3db13084_1470857336.css" media="print" />
-<script type="text/javascript">$(document).ready(function(e){
+    <link rel="stylesheet" type="text/css" href="/global_stock/css/carleton_basic_rules.css"/>
+    <title>Quire Maker | Carleton College</title>
+    <script type="text/javascript" src="/reason_package/jquery/jquery-1.10.2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/reason_package/reason_4.0/www/css/modules.css?v=4"/>
+    <link rel="stylesheet" type="text/css"
+          href="/reason_package/reason_4.0/www/tmp_local/compiled/aa/aac2d9e8188e5fb2f0bcf6cc238da4bd_1533565011.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="/reason_package/reason_4.0/www/tmp_local/compiled/2d/2debe2aa4a8201c2ff4b4dfc3db13084_1470857336.css"
+          media="print"/>
+    <script type="text/javascript">$(document).ready(function(e){
 	var nav=$('#minisiteNavigation');
 	var subNav=$('#navigation .subNavElements');
 	if(nav.length && subNav.length){
@@ -27,190 +29,261 @@
 		};
 		blurbNavSwap();$(window).resize(blurbNavSwap);
 	}
-});</script>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VgYBVVZVGwICU1BRBQkE"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(18),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(19),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var x=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof x&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof x&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(21)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(21)(r);n.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(21)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(21)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(21)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var x=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(){var t=window.NREUM,n=t.info.accountID||null,e=t.info.agentID||null,r=t.info.trustKey||null,i="btoa"in window&&"function"==typeof window.btoa;if(!n||!e||!i)return null;var a={v:[0,1],d:{ty:"Browser",ac:n,ap:e,id:o.generateCatId(),tr:o.generateCatId(),ti:Date.now()}};return r&&n!==r&&(a.d.tk=r),btoa(JSON.stringify(a))}var o=t(16);n.exports={generateTraceHeader:r}},{}],11:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(l[r],this.listener,!1);n.aborted||(e.duration=s.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):a(this,t),e.cbTime=this.cbTime,d.emit("xhr-done",[t],t),c("xhr",[n,e,this.startTime]))}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return w(r)}function i(t,n){var e=f(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}function a(t,n){t.params.status=n.status;var e=o(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),f=t(12),u=t(10).generateTraceHeader,d=t("ee"),l=["load","error","abort","timeout"],p=l.length,h=t("id"),m=t(15),w=t(14),v=window.XMLHttpRequest;s.features.xhr=!0,t(9),d.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){a(n,t)},!1),m&&(m>34||m<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),d.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),d.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=!1;if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(e=!!NREUM.init.distributed_tracing.enabled),e&&this.sameOrigin){var r=u();r&&n.setRequestHeader("newrelic",r)}}),d.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=w(r);i&&(e.txSize=i)}this.startTime=s.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{d.emit("internal-error",[e])}catch(r){}}};for(var a=0;a<p;a++)n.addEventListener(l[a],this.listener,!1)}),d.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),d.on("xhr-load-added",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),d.on("xhr-load-removed",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),d.on("addEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-added",[t[1],t[2]],n)}),d.on("removeEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-removed",[t[1],t[2]],n)}),d.on("fn-start",function(t,n,e){n instanceof v&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=s.now()))}),d.on("fn-end",function(t,n){this.xhrCbStart&&d.emit("xhr-cb-time",[s.now()-this.xhrCbStart,this.onload,n],n)})}},{}],12:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],13:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(18),s=t(19),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],14:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],15:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],16:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],17:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],18:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],19:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],20:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],21:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(19),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[g[e]];return d&&d.push([x,e,r,a]),a}}function p(t,n){y[t]=m(t).concat(n)}function h(t,n){var e=y[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return y[t]||[]}function w(t){return d[t]=d[t]||o(e)}function v(t,n){f(t,function(t,e){n=n||"feature",g[e]=n,n in u||(u[n]=[])})}var y={},g={},x={on:p,addEventListener:p,removeEventListener:h,emit:e,get:w,listeners:m,context:n,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(18),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(g,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return R.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(18),u=t("ee"),d=t(17),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var y=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1130.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:x,userAgent:d};t(13),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,R=t(20)},{}]},{},["loader",2,11,4,3]);</script>
-<link rel="shortcut icon" href="/favicon.ico" />
-<meta name="robots" content="none" />
-<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
-<script type="text/javascript" src="/reason_package/www/fitvids/jquery.fitvids_outside.js"></script>
-<script>$(document).ready(function(){$("body").fitVids();});</script>
-<link rel="stylesheet" type="text/css" href="/reason_package/reason_4.0/www/css/timer.css" />
-<script type="text/javascript" src="/reason_package/reason_4.0/www/js/timer/timer.js"></script>
-<script src="https://www.admissions.carleton.edu/ping" async="async"></script>
-<style>@font-face{font-family:'bb';src:url(data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAXMAAsAAAAABYAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABPUy8yAAABCAAAAGAAAABgKGL/hGNtYXAAAAFoAAAAXAAAAFzpPiZuZ2FzcAAAAcQAAAAIAAAACAAAABBnbHlmAAABzAAAAeQAAAHk5Qm9OmhlYWQAAAOwAAAANgAAADYGBnJGaGhlYQAAA+gAAAAkAAAAJAPiAelobXR4AAAEDAAAACAAAAAgCvoABWxvY2EAAAQsAAAAEgAAABIBgADCbWF4cAAABEAAAAAgAAAAIAALAFduYW1lAAAEYAAAAUoAAAFKIAmJsnBvc3QAAAWsAAAAIAAAACAAAwAAAAMBzAGQAAUAAAFMAWYAAABHAUwBZgAAAPUAGQCEAAAAAAAAAAAAAAAAAAAAARAAIAAAAAAAAAAAAAAAAAAAQAAA6QIB4P/gACAB4AAgAAAAAQAAAAAAAAAAAAAAIAAAAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEAEAAAAAMAAgAAgAEAAEAICW86QL//f//AAAAAAAgJbzpAP/9//8AAf/j2kgXBQADAAEAAAAAAAAAAAAAAAAAAQAB//8ADwABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAAAAAAAAAAIAADc5AQAAAAABAAAAYAIAAWAAAgAAJQEhAQABAP4AYAEAAAAAAgAE/+AB8wHbABgAJQAAJSc+ATU0LgIjIg4CFRQeAjMyNjcXNyU0NjMyFhUUBiMiJjUB830PEiA2SioqSTcfHzdKKRoxFoBF/lJQODlQUDk4UCV9GDgfKkk3ICA3SSoqSTcgDQyARew5UFA5OVBQOQAAAAABAAAAAAIAAbAAEAAAJSc1IxUnARUzFTM1MxUzNTMCAGBAYP8AQKBAoECwYJBQYP8AEKBgYKAAAAEAAf/hAf8B3wBUAAAlOAExJzc4ATE+ATc2Ji8BLgEHDgEHOAExByc4ATEuAScmBg8BDgEXHgEXOAExFwc4ATEOAQcGFh8BHgE3PgE3OAExNxc4ATEeARcWNj8BPgEnLgEnAfubmwIBAQICBEkDCgQCAgKbmwICAgQKA0kEAgIBAQKbmwIBAQICBEkDCgQCAgKbmwICAgQKA0kEAgIBAQJFm5sCAgIECgNJBAICAQECm5sCAQECAgRJAwoEAgICm5sCAgIECgNJBAICAQECm5sCAQECAgRJAwoEAgICAAAAAQAAAAEAAOPsT59fDzz1AAsCAAAAAADSc5jFAAAAANJzmMUAAP/gAgAB3wAAAAgAAgAAAAAAAAABAAAB4P/gAAACAAAAAAACAAABAAAAAAAAAAAAAAAAAAAACAIAAAAAAAAAAAAAAAEAAAACAAAAAfoABAIAAAACAAABAAAAAAAKABQAHgAsAGYAggDyAAAAAQAAAAgAVQACAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA4ArgABAAAAAAABAAIAAAABAAAAAAACAAcAMwABAAAAAAADAAIAJwABAAAAAAAEAAIASAABAAAAAAAFAAsABgABAAAAAAAGAAIALQABAAAAAAAKABoATgADAAEECQABAAQAAgADAAEECQACAA4AOgADAAEECQADAAQAKQADAAEECQAEAAQASgADAAEECQAFABYAEQADAAEECQAGAAQALwADAAEECQAKADQAaGJiAGIAYlZlcnNpb24gMS4wAFYAZQByAHMAaQBvAG4AIAAxAC4AMGJiAGIAYmJiAGIAYlJlZ3VsYXIAUgBlAGcAdQBsAGEAcmJiAGIAYkZvbnQgZ2VuZXJhdGVkIGJ5IEljb01vb24uAEYAbwBuAHQAIABnAGUAbgBlAHIAYQB0AGUAZAAgAGIAeQAgAEkAYwBvAE0AbwBvAG4ALgAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=) format('woff');font-weight:normal;font-style:normal}body{margin:0;padding:0}#carletonBanner{font-family:"ProximaNova",Gotham,"Helvetica Neue",Arial,Helvetica,sans-serif;line-height:1.4;background:#0b5091;color:#c2d3e4;color:#fff;position:relative}#carletonBanner>.overlayBorder{position:absolute;width:100%;bottom:-1px;height:1px;background:rgba(255,255,255,0.25)}#carletonBanner ul{list-style:none;margin:0;padding:0}#carletonBanner a{text-decoration:none;color:#fff}#carletonBanner a img{border:0}#carletonBanner form{margin:0}#carletonBanner>.persistent{padding:10px 20px}#carletonBanner>.persistent:after{content:"";display:table;clear:both}#carletonBanner .logo{float:left;margin:2px 10px 0 0}#carletonBanner .home{margin-right:2px;float:left}#carletonBanner .home span.icon{float:left;background:#306aa2;padding:5px 10px;min-height:1.4em;display:inline-block}#carletonBanner .home span.icon>span:before{content:"\e901";font-family:'bb';speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-moz-osx-font-smoothing:grayscale;text-decoration:none;color:#c2d3e4}#carletonBanner .home span.icon>em{position:absolute;left:-9999px}#carletonBanner .home:hover span.icon,#carletonBanner .home:active span.icon,#carletonBanner .home:focus span.icon{background:#487cad}#carletonBanner .home:hover span.icon>span:before,#carletonBanner .home:active span.icon>span:before,#carletonBanner .home:focus span.icon>span:before{color:#fff}#carletonBanner .menu{float:left}#carletonBanner .menu>li{float:left;margin-right:2px}#carletonBanner .menu>li>a{display:block;background:#306aa2;padding:5px 10px;min-height:1.4em}#carletonBanner .menu>li>a:hover,#carletonBanner .menu>li>a:active,#carletonBanner .menu>li>a:focus{background:#487cad}#carletonBanner .menu>li.bbFor>a>em{font-style:normal}#carletonBanner .search{float:right}#carletonBanner .search #searchToggle,#carletonBanner .search input[type="image"]{padding:10px 9px 8px;background:#306aa2;display:inline-block;line-height:.5;color:#fff;border:0;-webkit-appearance:none;-moz-appearance:none;border-radius:0}#carletonBanner .search #searchToggle:hover,#carletonBanner .search input[type="image"]:hover,#carletonBanner .search #searchToggle:active,#carletonBanner .search input[type="image"]:active,#carletonBanner .search #searchToggle:focus,#carletonBanner .search input[type="image"]:focus{background:#487cad}#carletonBanner .search #searchToggle{display:none}#carletonBanner .search form{display:inline-block}#carletonBanner .search input[type="image"],#carletonBanner .search #bannerSearch{vertical-align:middle}#carletonBanner .search input[type="image"]::moz-focus-inner{border:0;padding:0}#carletonBanner .search .dialog{position:absolute;left:-9999px}#carletonBanner .search #bannerSearchForm{position:relative}#carletonBanner .search #bannerSearch{padding:7px;-moz-box-sizing:border-box;box-sizing:border-box;height:32px;width:14.5em;background:#aec5db;border:0;-webkit-appearance:none;-moz-appearance:none;border-radius:0;font-size:12px}#carletonBanner .search #bannerSearch:focus{background:#cedce9}#carletonBanner .search #bannerSearch::-webkit-input-placeholder{color:#3b434c}#carletonBanner .search #bannerSearch:-moz-placeholder{color:#3b434c;opacity:1}#carletonBanner .search #bannerSearch::-moz-placeholder{color:#3b434c;opacity:1}#carletonBanner .search #bannerSearch:-ms-input-placeholder{color:#3b434c}#carletonBanner .search #bannerSearch::-ms-input-placeholder{color:#3b434c}#carletonBanner .search #bannerSearch::placeholder{color:#3b434c}#carletonBanner .search #bannerSearch:focus::-webkit-input-placeholder{color:#58646f}#carletonBanner .search #bannerSearch:focus:-moz-placeholder{color:#58646f;opacity:1}#carletonBanner .search #bannerSearch:focus::-moz-placeholder{color:#58646f;opacity:1}#carletonBanner .search #bannerSearch:focus:-ms-input-placeholder{color:#58646f}#carletonBanner .search #bannerSearch:focus::-ms-input-placeholder{color:#58646f}#carletonBanner .search #bannerSearch:focus::placeholder{color:#58646f}@media all and (max-width:650px){#carletonBanner .menu{position:absolute;left:-9999px}}@media all and (max-width:825px){#carletonBanner .search #searchToggle{display:inline-block}#carletonBanner .search form{display:none}}@media all and (min-width:999px){#carletonBanner .search>.alternates{display:block !important;float:left;margin-right:10px}#carletonBanner .search>.alternates>a{background:#23629c;display:inline-block;padding:5px 10px;margin-right:2px;color:#dae5ef}#carletonBanner .search>.alternates>a:hover,#carletonBanner .search>.alternates>a:active,#carletonBanner .search>.alternates>a:focus{background:#3c73a7;color:#fff}}</style>
-<script>(function(){document.addEventListener("DOMContentLoaded",function(a){var b;return b=document.createElement("script"),b.type="text/javascript",b.src="/global_stock/bb/js/bluebar.min.js",b.readyState?b.onreadystatechange=function(){("loaded"===b.readyState||"complete"===b.readyState)&&(b.onreadystatechange=null,initialBluebarSetup())}:b.onload=function(){initialBluebarSetup()},document.getElementsByTagName("head")[0].appendChild(b)})}).call(this);</script>
-<link rel="stylesheet" href="/global_stock/bb/css/bluebar.css?v=2"/>
-<script type="text/javascript">
+});
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script type="text/javascript">
+        (window.NREUM||(NREUM={})).loader_config={xpid:"VgYBVVZVGwICU1BRBQkE"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(18),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(19),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var x=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof x&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof x&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(21)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(21)(r);n.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(21)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(21)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(21)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var x=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(){var t=window.NREUM,n=t.info.accountID||null,e=t.info.agentID||null,r=t.info.trustKey||null,i="btoa"in window&&"function"==typeof window.btoa;if(!n||!e||!i)return null;var a={v:[0,1],d:{ty:"Browser",ac:n,ap:e,id:o.generateCatId(),tr:o.generateCatId(),ti:Date.now()}};return r&&n!==r&&(a.d.tk=r),btoa(JSON.stringify(a))}var o=t(16);n.exports={generateTraceHeader:r}},{}],11:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(l[r],this.listener,!1);n.aborted||(e.duration=s.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):a(this,t),e.cbTime=this.cbTime,d.emit("xhr-done",[t],t),c("xhr",[n,e,this.startTime]))}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return w(r)}function i(t,n){var e=f(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}function a(t,n){t.params.status=n.status;var e=o(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),f=t(12),u=t(10).generateTraceHeader,d=t("ee"),l=["load","error","abort","timeout"],p=l.length,h=t("id"),m=t(15),w=t(14),v=window.XMLHttpRequest;s.features.xhr=!0,t(9),d.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){a(n,t)},!1),m&&(m>34||m<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),d.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),d.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=!1;if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(e=!!NREUM.init.distributed_tracing.enabled),e&&this.sameOrigin){var r=u();r&&n.setRequestHeader("newrelic",r)}}),d.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=w(r);i&&(e.txSize=i)}this.startTime=s.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{d.emit("internal-error",[e])}catch(r){}}};for(var a=0;a<p;a++)n.addEventListener(l[a],this.listener,!1)}),d.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),d.on("xhr-load-added",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),d.on("xhr-load-removed",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),d.on("addEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-added",[t[1],t[2]],n)}),d.on("removeEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-removed",[t[1],t[2]],n)}),d.on("fn-start",function(t,n,e){n instanceof v&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=s.now()))}),d.on("fn-end",function(t,n){this.xhrCbStart&&d.emit("xhr-cb-time",[s.now()-this.xhrCbStart,this.onload,n],n)})}},{}],12:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],13:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(18),s=t(19),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],14:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],15:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],16:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],17:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],18:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],19:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],20:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],21:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(19),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[g[e]];return d&&d.push([x,e,r,a]),a}}function p(t,n){y[t]=m(t).concat(n)}function h(t,n){var e=y[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return y[t]||[]}function w(t){return d[t]=d[t]||o(e)}function v(t,n){f(t,function(t,e){n=n||"feature",g[e]=n,n in u||(u[n]=[])})}var y={},g={},x={on:p,addEventListener:p,removeEventListener:h,emit:e,get:w,listeners:m,context:n,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(18),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(g,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return R.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(18),u=t("ee"),d=t(17),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var y=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1130.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:x,userAgent:d};t(13),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,R=t(20)},{}]},{},["loader",2,11,4,3]);
+    </script>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <meta name="robots" content="none"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"/>
+    <script type="text/javascript" src="/reason_package/www/fitvids/jquery.fitvids_outside.js"></script>
+    <script>$(document).ready(function(){$("body").fitVids();});</script>
+    <link rel="stylesheet" type="text/css" href="/reason_package/reason_4.0/www/css/timer.css"/>
+    <script type="text/javascript" src="/reason_package/reason_4.0/www/js/timer/timer.js"></script>
+    <script src="https://www.admissions.carleton.edu/ping" async="async"></script>
+    <style>
+        @font-face{font-family:'bb';src:url(data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAXMAAsAAAAABYAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABPUy8yAAABCAAAAGAAAABgKGL/hGNtYXAAAAFoAAAAXAAAAFzpPiZuZ2FzcAAAAcQAAAAIAAAACAAAABBnbHlmAAABzAAAAeQAAAHk5Qm9OmhlYWQAAAOwAAAANgAAADYGBnJGaGhlYQAAA+gAAAAkAAAAJAPiAelobXR4AAAEDAAAACAAAAAgCvoABWxvY2EAAAQsAAAAEgAAABIBgADCbWF4cAAABEAAAAAgAAAAIAALAFduYW1lAAAEYAAAAUoAAAFKIAmJsnBvc3QAAAWsAAAAIAAAACAAAwAAAAMBzAGQAAUAAAFMAWYAAABHAUwBZgAAAPUAGQCEAAAAAAAAAAAAAAAAAAAAARAAIAAAAAAAAAAAAAAAAAAAQAAA6QIB4P/gACAB4AAgAAAAAQAAAAAAAAAAAAAAIAAAAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEAEAAAAAMAAgAAgAEAAEAICW86QL//f//AAAAAAAgJbzpAP/9//8AAf/j2kgXBQADAAEAAAAAAAAAAAAAAAAAAQAB//8ADwABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAAAAAAAAAAIAADc5AQAAAAABAAAAYAIAAWAAAgAAJQEhAQABAP4AYAEAAAAAAgAE/+AB8wHbABgAJQAAJSc+ATU0LgIjIg4CFRQeAjMyNjcXNyU0NjMyFhUUBiMiJjUB830PEiA2SioqSTcfHzdKKRoxFoBF/lJQODlQUDk4UCV9GDgfKkk3ICA3SSoqSTcgDQyARew5UFA5OVBQOQAAAAABAAAAAAIAAbAAEAAAJSc1IxUnARUzFTM1MxUzNTMCAGBAYP8AQKBAoECwYJBQYP8AEKBgYKAAAAEAAf/hAf8B3wBUAAAlOAExJzc4ATE+ATc2Ji8BLgEHDgEHOAExByc4ATEuAScmBg8BDgEXHgEXOAExFwc4ATEOAQcGFh8BHgE3PgE3OAExNxc4ATEeARcWNj8BPgEnLgEnAfubmwIBAQICBEkDCgQCAgKbmwICAgQKA0kEAgIBAQKbmwIBAQICBEkDCgQCAgKbmwICAgQKA0kEAgIBAQJFm5sCAgIECgNJBAICAQECm5sCAQECAgRJAwoEAgICm5sCAgIECgNJBAICAQECm5sCAQECAgRJAwoEAgICAAAAAQAAAAEAAOPsT59fDzz1AAsCAAAAAADSc5jFAAAAANJzmMUAAP/gAgAB3wAAAAgAAgAAAAAAAAABAAAB4P/gAAACAAAAAAACAAABAAAAAAAAAAAAAAAAAAAACAIAAAAAAAAAAAAAAAEAAAACAAAAAfoABAIAAAACAAABAAAAAAAKABQAHgAsAGYAggDyAAAAAQAAAAgAVQACAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA4ArgABAAAAAAABAAIAAAABAAAAAAACAAcAMwABAAAAAAADAAIAJwABAAAAAAAEAAIASAABAAAAAAAFAAsABgABAAAAAAAGAAIALQABAAAAAAAKABoATgADAAEECQABAAQAAgADAAEECQACAA4AOgADAAEECQADAAQAKQADAAEECQAEAAQASgADAAEECQAFABYAEQADAAEECQAGAAQALwADAAEECQAKADQAaGJiAGIAYlZlcnNpb24gMS4wAFYAZQByAHMAaQBvAG4AIAAxAC4AMGJiAGIAYmJiAGIAYlJlZ3VsYXIAUgBlAGcAdQBsAGEAcmJiAGIAYkZvbnQgZ2VuZXJhdGVkIGJ5IEljb01vb24uAEYAbwBuAHQAIABnAGUAbgBlAHIAYQB0AGUAZAAgAGIAeQAgAEkAYwBvAE0AbwBvAG4ALgAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=) format('woff');font-weight:normal;font-style:normal}body{margin:0;padding:0}#carletonBanner{font-family:"ProximaNova",Gotham,"Helvetica Neue",Arial,Helvetica,sans-serif;line-height:1.4;background:#0b5091;color:#c2d3e4;color:#fff;position:relative}#carletonBanner>.overlayBorder{position:absolute;width:100%;bottom:-1px;height:1px;background:rgba(255,255,255,0.25)}#carletonBanner ul{list-style:none;margin:0;padding:0}#carletonBanner a{text-decoration:none;color:#fff}#carletonBanner a img{border:0}#carletonBanner form{margin:0}#carletonBanner>.persistent{padding:10px 20px}#carletonBanner>.persistent:after{content:"";display:table;clear:both}#carletonBanner .logo{float:left;margin:2px 10px 0 0}#carletonBanner .home{margin-right:2px;float:left}#carletonBanner .home span.icon{float:left;background:#306aa2;padding:5px 10px;min-height:1.4em;display:inline-block}#carletonBanner .home span.icon>span:before{content:"\e901";font-family:'bb';speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-moz-osx-font-smoothing:grayscale;text-decoration:none;color:#c2d3e4}#carletonBanner .home span.icon>em{position:absolute;left:-9999px}#carletonBanner .home:hover span.icon,#carletonBanner .home:active span.icon,#carletonBanner .home:focus span.icon{background:#487cad}#carletonBanner .home:hover span.icon>span:before,#carletonBanner .home:active span.icon>span:before,#carletonBanner .home:focus span.icon>span:before{color:#fff}#carletonBanner .menu{float:left}#carletonBanner .menu>li{float:left;margin-right:2px}#carletonBanner .menu>li>a{display:block;background:#306aa2;padding:5px 10px;min-height:1.4em}#carletonBanner .menu>li>a:hover,#carletonBanner .menu>li>a:active,#carletonBanner .menu>li>a:focus{background:#487cad}#carletonBanner .menu>li.bbFor>a>em{font-style:normal}#carletonBanner .search{float:right}#carletonBanner .search #searchToggle,#carletonBanner .search input[type="image"]{padding:10px 9px 8px;background:#306aa2;display:inline-block;line-height:.5;color:#fff;border:0;-webkit-appearance:none;-moz-appearance:none;border-radius:0}#carletonBanner .search #searchToggle:hover,#carletonBanner .search input[type="image"]:hover,#carletonBanner .search #searchToggle:active,#carletonBanner .search input[type="image"]:active,#carletonBanner .search #searchToggle:focus,#carletonBanner .search input[type="image"]:focus{background:#487cad}#carletonBanner .search #searchToggle{display:none}#carletonBanner .search form{display:inline-block}#carletonBanner .search input[type="image"],#carletonBanner .search #bannerSearch{vertical-align:middle}#carletonBanner .search input[type="image"]::moz-focus-inner{border:0;padding:0}#carletonBanner .search .dialog{position:absolute;left:-9999px}#carletonBanner .search #bannerSearchForm{position:relative}#carletonBanner .search #bannerSearch{padding:7px;-moz-box-sizing:border-box;box-sizing:border-box;height:32px;width:14.5em;background:#aec5db;border:0;-webkit-appearance:none;-moz-appearance:none;border-radius:0;font-size:12px}#carletonBanner .search #bannerSearch:focus{background:#cedce9}#carletonBanner .search #bannerSearch::-webkit-input-placeholder{color:#3b434c}#carletonBanner .search #bannerSearch:-moz-placeholder{color:#3b434c;opacity:1}#carletonBanner .search #bannerSearch::-moz-placeholder{color:#3b434c;opacity:1}#carletonBanner .search #bannerSearch:-ms-input-placeholder{color:#3b434c}#carletonBanner .search #bannerSearch::-ms-input-placeholder{color:#3b434c}#carletonBanner .search #bannerSearch::placeholder{color:#3b434c}#carletonBanner .search #bannerSearch:focus::-webkit-input-placeholder{color:#58646f}#carletonBanner .search #bannerSearch:focus:-moz-placeholder{color:#58646f;opacity:1}#carletonBanner .search #bannerSearch:focus::-moz-placeholder{color:#58646f;opacity:1}#carletonBanner .search #bannerSearch:focus:-ms-input-placeholder{color:#58646f}#carletonBanner .search #bannerSearch:focus::-ms-input-placeholder{color:#58646f}#carletonBanner .search #bannerSearch:focus::placeholder{color:#58646f}@media all and (max-width:650px){#carletonBanner .menu{position:absolute;left:-9999px}}@media all and (max-width:825px){#carletonBanner .search #searchToggle{display:inline-block}#carletonBanner .search form{display:none}}@media all and (min-width:999px){#carletonBanner .search>.alternates{display:block !important;float:left;margin-right:10px}#carletonBanner .search>.alternates>a{background:#23629c;display:inline-block;padding:5px 10px;margin-right:2px;color:#dae5ef}#carletonBanner .search>.alternates>a:hover,#carletonBanner .search>.alternates>a:active,#carletonBanner .search>.alternates>a:focus{background:#3c73a7;color:#fff}}
+    </style>
+    <script>
+        (function(){document.addEventListener("DOMContentLoaded",function(a){var b;return b=document.createElement("script"),b.type="text/javascript",b.src="/global_stock/bb/js/bluebar.min.js",b.readyState?b.onreadystatechange=function(){("loaded"===b.readyState||"complete"===b.readyState)&&(b.onreadystatechange=null,initialBluebarSetup())}:b.onload=function(){initialBluebarSetup()},document.getElementsByTagName("head")[0].appendChild(b)})}).call(this);
+    </script>
+    <link rel="stylesheet" href="/global_stock/bb/css/bluebar.css?v=2"/>
+    <script type="text/javascript">
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-29824341-1','auto');pageViewToggle = true;
 $(document).ready(function(){if(typeof(analyticsArray)!=='undefined'){for(i=0;i<analyticsArray.length;i++){if(analyticsArray[i](ga)===false){pageViewToggle=false;}}}if(pageViewToggle){ga('send','pageview');}});
-</script>
+
+    </script>
 </head>
 <body class="fullGraphics siteHome nocrumbs">
 <a href="#content" class="hide skipNav">Skip Navigation</a>
 <nav id="carletonBanner" role="navigation">
-	<div class="persistent">
-		<a href="//www.carleton.edu/" class="home"><img width="125" height="22" alt="Carleton" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPoAAAAsCAYAAABMi6UPAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAACTpJREFUeNrsHdtx4zhMzuT/3MGqg9VWEG0F8VYQu4I4FVipwLsVyKlASQVyKrBTgbUVWB3kyD3ojlEI8C3LPmKGk5lYIkEQTxKEJu/v70mECBEuG64iCSJEuHyYuHbAPIKM/clZ+8JaJnmkZe2NtT1r28lk0iL9rNmfJTzzPS5NhAgnBiaUKRdM1g7v5rBjbcnaVOgvF36vI4UjRDihRecCzv6sWJsTjzXQpoiFFy39hrVX1kp4PokWXUrzVHtBJ5NtpFoEF4YrWDsSFjpD3puCxV4j7/ehjNT+RHcTmEeqRbB103eIgOeGfXGhLxWMWkSqf6DZ0lDQizOfbwaGYRpXf1iiy6xw6bIQ3OpEQQ8m/Mszn9sx8oF/uKKEkf3ZCbFzBxsWBy6w3XPNOHID8XkEO9hb/nYO+xHRkg8l6CDksli5Ye3B09gP0F+ECB3MIgkGEnTYVMM2xJwsec+qtx6VRoTLgLtIggEEHeJu7Bx76/vohvX3zPuNyxAB3PYsUmIYi14SMdKvQDg8xWWIkPyTn/HBsESSBBB0plFnRIzUgvX1DrAxF2P1aM3nkRLDWPQ18dwmMB7PcSn+17COJAgL16BRuTZNiedeA+PB3Xdv57+wodgPQfa+NhI94immCY8Rvwzw6/PGHvBtPMx/nZx4tx0Sv6Q842OenjyevLcORrhdw99bxXNB4yWG7J5NpkkMcrolhODMcpcQGzrsuRa8h1cIGWzGmhvg2cjGgTBp1ccVaMCV3k+F0DeBmWoF9JwqnuXMxvdunlVKCoS6U+ZfgIY58cqdKvOSjVk4KJgZ8P1M4/kG+OaXrmAZ8gkPjX8iinZN0Yk9w2XzgcuQctKKlMrDQFqLZ8vVJrnamim16LxA4EzxNIFa8n6pecNvaolHbsv8cB/BBo4qWvZuKHoBy3kWmncuMFjrZIUCL1vPxfsdB0U66mivjSLpuTWkh+bAuF3edEFcqV0bjnu0FXSJkO8IvOqhBB3odEBSnWcdYwMtlwTOpWKMkwk6MccjCG8m87xYqxAjkYUSdAfjlVMInd0lE8Q6FBrvlb7nqGDgWnhOtJYVuMiq97PQgo4o+iPVj8KTKg08CMrKdwoba5nhHLGbl6kDjWYGOKQ6gi6x5AfgnUKjBsSBQmB3hoKOaea55bvvOgtuob1riWIqe8x+tLmg4kPQCW8u13y/dPWSfIcgBnNUhke9fpYIz2Ue+OQg4ROUnxEvo4OZbcxZjEzIc0WsOA3NnAZ91j3lUhmGTUUoASE8idJw7jtHPIIJOrjeGJ+kngzMQVdhUAahp/RJJaTYV5Ou36UVh1RVteHwG/m/S/rlb43dV74rvej9rGK2fSBlyelUIT8/GnaH3VdYjeBIClNavyyPzGTZoWminwdAnUysgX/5mn+nTjHgt60JH+sI+nZkwqw6a7Y9esoD4DoVmOBBsnitYp6haL9ElIzxmTHcf5C9YxRHBwAsnZvT9adln9h6zDU9hDfk//zdeWcMNPMpXn0L+qgAzgsxgm9PndwgITpntgY5t98Qwr4IkUAD1vwe+fnFslsss/EkiTDg9ucEj7QOvJcE8GBSwdMI4sXpCHo+Qnn/AVq57QnNj5Hqp0fCBfsGuG+hcaH5FupuQUInwmwthCojQpCbE9H73sISunqUrkqtsU0A0oHrcwzEhbvs53CfvaGy8MADWQyIz63LnoCQjnkLf6dE2PGk0VcoZRZq32OPGL8/x4UOV7kfQy76NSB+kfeAhVLJqWB1bgdGY2wXdnKFAsVc4U6wM0IAOJO/GDB7GmDNMw1BDUnb7Rj5REfQ/zoToe7yl7/CfMYScryMjEY66Zsp0PKGsI6d1X4JtDdiK5BTDW8wFNjKyjb0haZriFnmxDPZGQj3vQLPBloLjDCYEgjxQQWHM2ZV2maZfL4l5Wq1XcIzrx7LADBaWbkGl6E8NfKdy6W76whZYytEgz+DAtv3GRKSUPIkggzmA1vtCEMJOtecjPk3hFXnmwzpAItcw1gPsit7PSteIcLKBfwhMiTuXWjcBRnMageC0Gufnyj+d4LueO3JYXI+rPlcsMyqGBIT8kfGmD+ikDsBpx8/2ns442+4nXL9f49a0GFRN8Rzocvw3msqBMztDnoGeWFACXB7AfPbB9rf0DkOfB61oHcWkVjoPNSZJ8TauvsAd+dG4BHCS2jPDa5kZo59qC4nzeHqZtoLT1oFP7jwMTWnUe9hXAkE4khSCSirAEKe6faryMB6Mxj2q4WluySghMBXjgHfb9k5fhlXpSjWwDsrQ2Xmkq1Hvfs45kW/6mnDDeHCz33dERY0dpXof2tr6hqXwZi5AY5LrPrIuQIodGyzM3NdYwiv0pAxa29P51Uyxw3hwrvMb0ZY8+3ZCDoQaUEIe+WD6aGPOvGXGaXbzzox+4gfDxVMQosxgE6cTYVpK8d1vRfwUN0Ss92lvtPwUBbIHFObb8iDAkwRei/GzhRXiNbHhP3PJ5tsiir2CFZbCE/j4o6BGzk3wDMVcNw6zHd0XweFOPY7sR+ztJyn6KEpb9/B761JGAG811nlDTYG5GOgd+Ut1gVTgCYnPV+HWF/j/TTFd7hrw7JFqWbRO6rAYG1aXw0q0ux6FUGU9baEcj21xtzWoUsiSeYUspSUUWUhwOdgU6WG4IlPZZokBUFThzlWJuGIVeVVff492oRIXnkOiLtTlE0ukWJ+M0BohyiKQrLQtUJZHAnGKLrCgUL56A81uIjyQv8qi56CyyU49OdJFeyrYFyrwoaCIImtUilgg/JGGUHTA+CeYtZVsn6mpahUa7pG+KQw5GGsOGROeSmIEj+aerXQ18G41pueYvVWFq3TjAcPVXo/EamndWuNRTPF40N5XoNyuqVk7EFLFXuqh15oMGGlsW41tJ1PBlMoG+e6dsIcS6JQZKdQulYhONWankTlc80ceO9oVbIdhNJmEgewlFOFW1NrLtpac5KFbEyN90uEIc9R0CuDsWzW1iiMcwztCsdxcgf+NdnjqUci6H9g4kq05L9ySTeS3cg32ERTJhMIX9TUPqoQbq/d9HZEGzh2IT8VBFa+/xkn/u4ThoOvmNtwjq67/o1JMkfvmiqWvxAkJ14Y+4sw7xbWc+PrOmdvjjlyGrOFeT6ZlngSvNbW15q58N7fAgwABVKKHhJe0zgAAAAASUVORK5CYII=" class="logo"/><span class="icon"><span aria-hidden="true"></span><em>Home</em></span></a>
-		<a id="menuToggle" href="#bbMenu" style="display:none;">Menu</a>
-		<ul class="menu" id="bbMenu">
-			<li class="tab"><a href="/academics/" data-target="/global_stock/bb/html/academics.html">Academics</a></li>
-			<li class="tab"><a href="/life/" data-target="/global_stock/bb/html/campuslife.html">Campus Life</a></li>
-			<li class="tab"><a href="https://www.carleton.edu/admissions/" data-target="/global_stock/bb/html/admissions.html">Admissions</a></li>
-			<li class="for" id="bbFor"><a id="bbForLink" href="/sitemap/">For<em>&#8230;</em></a>
-				<ul id="bbForList" aria-live="polite" style="display:none;">
-					<li><a href="/student/">Students</a></li>
-					<li><a href="/facstaff/">Faculty &amp; Staff</a></li>
-					<li><a href="/parents/">Parents &amp; Families</a></li>
-					<li><a href="/alumni/">Alumni</a></li>
-					<li><a href="https://www.carleton.edu/admissions/">Prospective Students</a></li>
-				</ul>
-			</li>
-		</ul>
-		<div class="search">
-			<div class="alternates" style="display:none"><a href="/az/" title="A-Z Guide">A-Z</a><a href="/campus/directory/" title="Campus Directory">Directory</a></div>
-			<a href="//search.carleton.edu" id="searchToggle"><img width="14" height="14" alt="Search" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAKNJREFUeNpi+v//PwMQCwDx/P+o4D4QB0DlMTBM03kkxeuR+CCQgEsjzKb5aJIOQPweKqeATSPMJgEsJjdA5RvQ5ZgYIOABEH9gwAQHGHAAmEYBHPIKuDSCrN2PIxAEoF74D/Uvhh8dkEJwPjQKCpA04dTIAFV8/z9+kIBNI3IUNEAVKUBprJoZcKUMJJyATSMLA2GwABubEWwtGYCJgUwAEGAACuyu1ZUGgekAAAAASUVORK5CYII="/></a>
-			<form id="bannerSearchForm" method="get" action="/searchBouncer.php">
-				<div class="basic"><input type="search" autocomplete="off" id="bannerSearch" name="q" placeholder="Search People &amp; Pages"/><input id="bannerSearchImage" type="image" width="14" height="14" alt="Submit" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAKNJREFUeNpi+v//PwMQCwDx/P+o4D4QB0DlMTBM03kkxeuR+CCQgEsjzKb5aJIOQPweKqeATSPMJgEsJjdA5RvQ5ZgYIOABEH9gwAQHGHAAmEYBHPIKuDSCrN2PIxAEoF74D/Uvhh8dkEJwPjQKCpA04dTIAFV8/z9+kIBNI3IUNEAVKUBprJoZcKUMJJyATSMLA2GwABubEWwtGYCJgUwAEGAACuyu1ZUGgekAAAAASUVORK5CYII="/></div>
-				<div class="dialog" id="bannerSearchDialog">
-					<div class="activeLabel"><label for="bannerSearch">Search People &amp; Pages</label></div>
-					<div class="scopes" style="display:none">
-						<fieldset>
-							<legend>What Should Be Searched?</legend>
-							<label><input type="radio" checked="checked" name="scope" value=""/> Search all of Carleton.edu</label>
-							<label><input type="radio" id="searchLimitURL" name="scope" value=""/> Just <span id="searchLimitName"></span></label>
-						</fieldset>
-						<input type="submit" value="Submit"/>
-					</div>
-					<div class="alternates"><a href="/campus/directory/">Campus Directory</a> <a href="/az/">A-Z Guide</a></div>
-				</div>
-			</form>
-		</div>
-	</div>
-	<div class="closer" style="display:none;"><a href="#carletonBanner">Close</a></div>
-	<div class="overlayBorder"></div>
+    <div class="persistent">
+        <a href="//www.carleton.edu/" class="home"><img width="125" height="22" alt="Carleton"
+                                                        src="data:image/png;base64,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"
+                                                        class="logo"/><span class="icon"><span
+                aria-hidden="true"></span><em>Home</em></span></a>
+        <a id="menuToggle" href="#bbMenu" style="display:none;">Menu</a>
+        <ul class="menu" id="bbMenu">
+            <li class="tab"><a href="/academics/" data-target="/global_stock/bb/html/academics.html">Academics</a></li>
+            <li class="tab"><a href="/life/" data-target="/global_stock/bb/html/campuslife.html">Campus Life</a></li>
+            <li class="tab"><a href="https://www.carleton.edu/admissions/"
+                               data-target="/global_stock/bb/html/admissions.html">Admissions</a></li>
+            <li class="for" id="bbFor"><a id="bbForLink" href="/sitemap/">For<em>&#8230;</em></a>
+                <ul id="bbForList" aria-live="polite" style="display:none;">
+                    <li><a href="/student/">Students</a></li>
+                    <li><a href="/facstaff/">Faculty &amp; Staff</a></li>
+                    <li><a href="/parents/">Parents &amp; Families</a></li>
+                    <li><a href="/alumni/">Alumni</a></li>
+                    <li><a href="https://www.carleton.edu/admissions/">Prospective Students</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="search">
+            <div class="alternates" style="display:none"><a href="/az/" title="A-Z Guide">A-Z</a><a
+                    href="/campus/directory/" title="Campus Directory">Directory</a></div>
+            <a href="//search.carleton.edu" id="searchToggle"><img width="14" height="14" alt="Search"
+                                                                   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAKNJREFUeNpi+v//PwMQCwDx/P+o4D4QB0DlMTBM03kkxeuR+CCQgEsjzKb5aJIOQPweKqeATSPMJgEsJjdA5RvQ5ZgYIOABEH9gwAQHGHAAmEYBHPIKuDSCrN2PIxAEoF74D/Uvhh8dkEJwPjQKCpA04dTIAFV8/z9+kIBNI3IUNEAVKUBprJoZcKUMJJyATSMLA2GwABubEWwtGYCJgUwAEGAACuyu1ZUGgekAAAAASUVORK5CYII="/></a>
+            <form id="bannerSearchForm" method="get" action="/searchBouncer.php">
+                <div class="basic"><input type="search" autocomplete="off" id="bannerSearch" name="q"
+                                          placeholder="Search People &amp; Pages"/><input id="bannerSearchImage"
+                                                                                          type="image" width="14"
+                                                                                          height="14" alt="Submit"
+                                                                                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAKNJREFUeNpi+v//PwMQCwDx/P+o4D4QB0DlMTBM03kkxeuR+CCQgEsjzKb5aJIOQPweKqeATSPMJgEsJjdA5RvQ5ZgYIOABEH9gwAQHGHAAmEYBHPIKuDSCrN2PIxAEoF74D/Uvhh8dkEJwPjQKCpA04dTIAFV8/z9+kIBNI3IUNEAVKUBprJoZcKUMJJyATSMLA2GwABubEWwtGYCJgUwAEGAACuyu1ZUGgekAAAAASUVORK5CYII="/>
+                </div>
+                <div class="dialog" id="bannerSearchDialog">
+                    <div class="activeLabel"><label for="bannerSearch">Search People &amp; Pages</label></div>
+                    <div class="scopes" style="display:none">
+                        <fieldset>
+                            <legend>What Should Be Searched?</legend>
+                            <label><input type="radio" checked="checked" name="scope" value=""/> Search all of
+                                Carleton.edu</label>
+                            <label><input type="radio" id="searchLimitURL" name="scope" value=""/> Just <span
+                                    id="searchLimitName"></span></label>
+                        </fieldset>
+                        <input type="submit" value="Submit"/>
+                    </div>
+                    <div class="alternates"><a href="/campus/directory/">Campus Directory</a> <a href="/az/">A-Z
+                        Guide</a></div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="closer" style="display:none;"><a href="#carletonBanner">Close</a></div>
+    <div class="overlayBorder"></div>
 </nav>
 <div id="wrapper" class="fullGraphicsView">
-<div id="bannerAndMeat">
-<header id="banner" role="banner" aria-label="site">
-<div class="navJump"><a href="#minisiteNavigation" title="Navigation menu"><span class="navJumpText">Jump to navigation menu</span></a></div>
-<h1 class="banner-text"><a href="/english/quire-maker/"><span>Quire Maker</span></a></h1>
-</header>
-<div id="meat" class="containsContent containsNavigation containsConNav">
-<main id="content" role="main">
-<div class="contentHead">
+    <div id="bannerAndMeat">
+        <header id="banner" role="banner" aria-label="site">
+            <div class="navJump"><a href="#minisiteNavigation" title="Navigation menu"><span class="navJumpText">Jump to navigation menu</span></a>
+            </div>
+            <h1 class="banner-text"><a href="/english/quire-maker/"><span>Quire Maker</span></a></h1>
+        </header>
+        <div id="meat" class="containsContent containsNavigation containsConNav">
+            <main id="content" role="main">
+                <div class="contentHead">
+                    <div class="pageTitle">
+                        <h2 class="pageTitle"><span>Quire Maker</span></h2></div>
+                </div>
+                <div class="contentMain">
+                    <form method="post" action="/quiremaker/submitted/" enctype="application/x-www-form-urlencoded"
+                          id="disco_form" name="disco_form">
+                        <div id="discoLinear">
+                            <div class="formElement" id="contentItem" >
+                                <a name="content_error"></a>
+                                <div class="words"><label for="contentElement"><span
+                                        class="labelText">Content</span><span class="requiredIndicator"><span
+                                        title="required">*</span></span></label></div>
+                                <div class="element">
+                                    <script language="javascript" type="text/javascript"
+                                            src="/reason_package/www/tiny_mce/tinymce.min.js"></script>
+                                    <script language="javascript" type="text/javascript">
+										tinymce.init({
+										mode : "exact",
+										toolbar1 : "formatselect,bold,italic,hr,blockquote,numlist,bullist,indent,outdent,image,link,unlink,anchor",
+										plugins : "anchor,link,paste,hr",
+										dialog_type : "modal",
+										theme : "modern",
+										convert_urls : false,
+										menubar : false,
+										block_formats : "Paragraph=p;Header 1=h3;Header 2=h4",
+										content_css : "/reason_package/www/css/universal.css",
+										selector : "textarea[name=content]"
+										});
+                                    </script>
+                                    <textarea name="content" id="contentElement" rows="20" cols="80" required></textarea>
+                                </div>
+                            </div>
+                            <div class="formElement" id="pagewidthItem">
+                                <a name="page_width_error"></a>
+                                <div class="words"><label for="page_widthElement"><span
+                                        class="labelText">Page Width</span><span class="requiredIndicator"><span
+                                        title="required">*</span></span></label></div>
+                                <div class="element">
+                                    <input type="text" name="page_width" value="8.5" size="50" maxlength="256"
+                                           id="page_widthElement" class="text" required/>
+                                    <div class="formComment smallText">in inches</div>
+                                </div>
+                            </div>
+                            <div class="formElement" id="pageheightItem">
+                                <a name="page_height_error"></a>
+                                <div class="words"><label for="page_heightElement"><span
+                                        class="labelText">Page Height</span><span class="requiredIndicator"><span
+                                        title="required">*</span></span></label></div>
+                                <div class="element">
+                                    <input type="text" name="page_height" value="11" size="50" maxlength="256"
+                                           id="page_heightElement" class="text" required/>
+                                    <div class="formComment smallText">in inches</div>
+                                </div>
+                            </div>
+                            <div class="formElement" id="pagesItem">
+                                <a name="pages_error"></a>
+                                <div class="words"><label for="pagesElement"><span class="labelText">Pages</span><span
+                                        class="requiredIndicator"><span title="required">*</span></span></label></div>
+                                <div class="element">
+                                    <select id="pagesElement" name="pages" size="1" required>
+                                        <option value="">--</option>
+                                        <option value="16" selected="selected">16</option>
+                                        <option value="32">32</option>
+                                    </select>
+                                    <div class="formComment smallText">Pages in the generated quire. Content will be
+                                        truncated if it exceeds this length.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="formElement" id="fontsizeItem">
+                                <a name="font_size_error"></a>
+                                <div class="words"><label for="font_sizeElement"><span
+                                        class="labelText">Font Size</span><span class="requiredIndicator"><span
+                                        title="required">*</span></span></label></div>
+                                <div class="element">
+                                    <input type="text" name="font_size" value="12px" size="50" maxlength="256"
+                                           id="font_sizeElement" class="text" required/>
+                                    <div class="formComment smallText">Font size on the individual quire pages. Play
+                                        with this to get it all to fit.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="formElement" id="includepagenumbersItem">
+                                <a name="include_page_numbers_error"></a>
+                                <div class="words"><label for="checkbox_include_page_numbers"><span class="labelText">Include Page Numbers</span></label>
+                                </div>
+                                <div class="element">
+                                    <input type="checkbox" id="checkbox_include_page_numbers"
+                                           name="include_page_numbers" value="true" class="checkbox"/>
+                                    <div class="formComment smallText">Prints page numbers on the individual quire pages
+                                        to make for easier folding.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="submitSection">
+                                <input type="submit" name="__button_0" value=" Generate "/>&nbsp;&nbsp;
+                            </div>
+                        </div>
+<!--                        <input type="hidden" name="csrf_token" value="2df011343e74519d314e1f100fa9d125"/>-->
+                        <input type="hidden" name="submitted" value="true"/>
+                    </form>
 
 
-<div class="pageTitle">
-<h2 class="pageTitle"><span>Quire Maker</span></h2></div>
+                </div>
+            </main>
+            <div id="navigation">
+                <div id="navInnerWrap" class="hasNav hasSubNav">
 
 
+                    <nav id="minisiteNavigation"
+                         class="module_identifier-mcla-NavigationModule-mloc-navigation-mpar-fb803aca84dbfff2e856969d64f2ee30 module_api-standalone"
+                         role="navigation" aria-label="page">
+                        <div class="list">
+                            <ul class="navListTop">
+                                <li class="navListItem open current"><strong
+                                        class="home"><span>Quire Maker</span></strong>
+                                    <ul class="navList">
+                                        <li class="navListItem closed jump jump-internal"><a
+                                                href="https://www.carleton.edu/english/">English Department Home</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+
+                    <div class="subNavElements">
+                        <aside id="subNav" class="subNavBlock" role="complementary">
+
+
+                            <div class="blurbs module_identifier-mcla-BlurbModule-mloc-sub_nav-mpar-dcca48101505dd86b703689a604fe3c4 module_api-standalone"
+                                 id="blurbsModule0">
+                                <div class="blurb number1 odd" id="blurb1841115">
+                                    <div class="callOut">
+                                        <p><strong>Quire.</strong> <em>n.</em> A collection of leaves of paper, folded
+                                            one within the other, in a manuscript or book.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer" role="contentinfo">
+        <div class="module1">
+
+
+        </div>
+        <div class="module2 lastModule">
+
+
+        </div>
+    </footer>
 </div>
-<div class="contentMain">
-
-
-<form method="post" action="/quiremaker/submitted/" enctype="application/x-www-form-urlencoded" id="disco_form" name="disco_form" >
-<div id="discoLinear">
-<div class="formElement" id="contentItem">
-<a name="content_error"></a>
-<div class="words"><label for="contentElement"><span class="labelText">Content</span><span class="requiredIndicator"><span title="required">*</span></span></label></div>
-<div class="element">
-<script language="javascript" type="text/javascript" src="/reason_package/www/tiny_mce/tinymce.min.js"></script>
-<script language="javascript" type="text/javascript">
-tinymce.init({
-mode : "exact",
-toolbar1 : "formatselect,bold,italic,hr,blockquote,numlist,bullist,indent,outdent,image,link,unlink,anchor",
-plugins : "anchor,link,paste,hr",
-dialog_type : "modal",
-theme : "modern",
-convert_urls : false,
-menubar : false,
-block_formats : "Paragraph=p;Header 1=h3;Header 2=h4",
-content_css : "/reason_package/www/css/universal.css",
-selector : "textarea[name=content]"
-});
+<div id="bluebar-search-data" data-site-url="apps.carleton.edu/english/quire-maker" data-site-name="Quire Maker"></div>
+<script type="text/javascript">
+    window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"e660f21c0f","applicationID":"12713283","transactionName":"MQAHZEIAXRZYWkNQVwhKJkVDFVwIFkhCUEoDOghRWwRB","queueTime":1,"applicationTime":100,"atts":"HUcEEgoaThg=","errorBeacon":"bam.nr-data.net","agent":""}
 </script>
-<textarea name="content" id="contentElement" rows="20" cols="80"></textarea></div>
-</div>
-<div class="formElement" id="pagewidthItem">
-<a name="page_width_error"></a>
-<div class="words"><label for="page_widthElement"><span class="labelText">Page Width</span><span class="requiredIndicator"><span title="required">*</span></span></label></div>
-<div class="element">
-<input type="text" name="page_width" value="8.5" size="50" maxlength="256" id="page_widthElement" class="text" /><div class="formComment smallText">in inches</div></div>
-</div>
-<div class="formElement" id="pageheightItem">
-<a name="page_height_error"></a>
-<div class="words"><label for="page_heightElement"><span class="labelText">Page Height</span><span class="requiredIndicator"><span title="required">*</span></span></label></div>
-<div class="element">
-<input type="text" name="page_height" value="11" size="50" maxlength="256" id="page_heightElement" class="text" /><div class="formComment smallText">in inches</div></div>
-</div>
-<div class="formElement" id="pagesItem">
-<a name="pages_error"></a>
-<div class="words"><label for="pagesElement"><span class="labelText">Pages</span><span class="requiredIndicator"><span title="required">*</span></span></label></div>
-<div class="element">
-<select id="pagesElement" name="pages" size="1" >
-<option value="">--</option>
-<option value="16" selected="selected">16</option>
-<option value="32">32</option>
-</select>
-<div class="formComment smallText">Pages in the generated quire. Content will be truncated if it exceeds this length.</div></div>
-</div>
-<div class="formElement" id="fontsizeItem">
-<a name="font_size_error"></a>
-<div class="words"><label for="font_sizeElement"><span class="labelText">Font Size</span><span class="requiredIndicator"><span title="required">*</span></span></label></div>
-<div class="element">
-<input type="text" name="font_size" value="12px" size="50" maxlength="256" id="font_sizeElement" class="text" /><div class="formComment smallText">Font size on the individual quire pages. Play with this to get it all to fit.</div></div>
-</div>
-<div class="formElement" id="includepagenumbersItem">
-<a name="include_page_numbers_error"></a>
-<div class="words"><label for="checkbox_include_page_numbers"><span class="labelText">Include Page Numbers</span></label></div>
-<div class="element">
-<input type="checkbox" id="checkbox_include_page_numbers" name="include_page_numbers" value="true" class="checkbox" /><div class="formComment smallText">Prints page numbers on the individual quire pages to make for easier folding.</div></div>
-</div>
-<div class="submitSection">
-<input type="submit" name="__button_0" value=" Generate " />&nbsp;&nbsp;</div></div><input type="hidden" name="csrf_token" value="2df011343e74519d314e1f100fa9d125" />
-<input type="hidden" name="submitted" value="true" />
-</form>
-
-
-</div>
-</main>
-<div id="navigation">
-<div id="navInnerWrap" class="hasNav hasSubNav">
-
-
-<nav id="minisiteNavigation" class="module_identifier-mcla-NavigationModule-mloc-navigation-mpar-fb803aca84dbfff2e856969d64f2ee30 module_api-standalone" role="navigation" aria-label="page"><div class="list"><ul class="navListTop"><li class="navListItem open current"><strong class="home"><span>Quire Maker</span></strong><ul class="navList"><li class="navListItem closed jump jump-internal"><a href="https://www.carleton.edu/english/">English Department Home</a></li></ul></li></ul>
-</div></nav>
-
-<div class="subNavElements">
-<aside id="subNav" class="subNavBlock" role="complementary">
-
-
-<div class="blurbs module_identifier-mcla-BlurbModule-mloc-sub_nav-mpar-dcca48101505dd86b703689a604fe3c4 module_api-standalone" id="blurbsModule0">
-<div class="blurb number1 odd" id="blurb1841115"><div class="callOut">
-<p><strong>Quire.</strong> <em>n.</em> A collection of leaves of paper, folded one within the other, in a manuscript or book.</p>
-</div></div>
-</div>
-
-
-</aside>
-</div>
-</div>
-</div>
-</div>
-</div>
-<footer id="footer" role="contentinfo">
-<div class="module1">
-
-<div id="maintained">
-<div id="maintainer">Quire Maker pages maintained by <a href="mailto:mclapp@carleton.edu">Meggan Clapp</a></div><div id="lastUpdated">This page was last updated on 20 June 2019</div></div>
-
-
-</div><div class="module2 lastModule">
-
-<div class="loginLinkModule authenticated"><p id="footerLoginLink"><span class="username">nossw</span>: <a href="https://apps.carleton.edu/login/?logout=1" class="logout">Logout</a></p>
-</div>
-
-
-</div></footer>
-</div>
-<div id="bluebar-search-data" data-site-url="apps.carleton.edu/english/quire-maker" data-site-name="Quire Maker"></div><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"e660f21c0f","applicationID":"12713283","transactionName":"MQAHZEIAXRZYWkNQVwhKJkVDFVwIFkhCUEoDOghRWwRB","queueTime":1,"applicationTime":100,"atts":"HUcEEgoaThg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</body>
 </html>
